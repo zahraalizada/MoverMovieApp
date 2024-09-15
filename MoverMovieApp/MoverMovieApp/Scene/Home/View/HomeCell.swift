@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ListProtocol: AnyObject {
+    func didTapSeeAllButton(dataType: HomeCell.DataType, data: [MovieResult]?)
+    func didTapSeeAllButton(dataType: HomeCell.DataType, data: [TvShowResult]?)
+}
+
 class HomeCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -15,11 +20,14 @@ class HomeCell: UICollectionViewCell {
     var movies = [MovieResult]()
     var shows = [TvShowResult]()
     
+    var items = [TopImageBottomLabelProtocol]()
+    
     enum DataType {
         case movies
         case shows
     }
     var dataType: DataType = .movies
+    weak var delegate: ListProtocol?
     
     var didItemSelected: ((Int) -> Void)?
     
@@ -27,6 +35,11 @@ class HomeCell: UICollectionViewCell {
         super.awakeFromNib()
         
         collection.register(UINib(nibName: "TopImageBottomLabelCell", bundle: nil), forCellWithReuseIdentifier: "TopImageBottomLabelCell")
+    }
+    
+    func configure(title: String, items: [TopImageBottomLabelProtocol]) {
+        nameLabel.text = title
+        self.items = items
     }
     
     func configure(title: String, movies: [MovieResult]) {
@@ -44,30 +57,24 @@ class HomeCell: UICollectionViewCell {
     }
     
     @IBAction func seeAllButtonTapped(_ sender: Any) {
-        
+        switch dataType {
+        case .movies:
+            delegate?.didTapSeeAllButton(dataType: .movies, data: movies)
+        case .shows:
+            delegate?.didTapSeeAllButton(dataType: .shows, data: shows)
+        }
     }
-
 }
 
 
 extension HomeCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch dataType {
-        case .movies:
-            return movies.count
-        case .shows:
-            return shows.count
-        }
+        items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopImageBottomLabelCell", for: indexPath) as! TopImageBottomLabelCell
-        switch dataType {
-        case .movies:
-            cell.configure(data: movies[indexPath.item])
-        case .shows:
-            cell.configure(data: shows[indexPath.item])
-        }
+        cell.configure(data: items[indexPath.item])
         return cell
     }
     
@@ -76,14 +83,7 @@ extension HomeCell: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch dataType {
-        case .movies:
-             didItemSelected?(movies[indexPath.item].id ?? 0)
-        case .shows:
-             didItemSelected?(shows[indexPath.item].id ?? 0)
-        }
-        
-        
+        didItemSelected?(indexPath.item)
     }
     
 }

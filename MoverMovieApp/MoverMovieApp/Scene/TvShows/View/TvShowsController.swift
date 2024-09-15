@@ -44,7 +44,8 @@ extension TvShowsController: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
         let item = viewModel.items[indexPath.item]
-        cell.configureTv(title: item.name ?? "", shows: item.shows ?? [])
+        cell.delegate = self
+        cell.configure(title: item.name ?? "", items: item.shows ?? [])
         cell.didItemSelected = { seriesId in
             let coordinator = TvShowDetailCoordinator(navigationController: self.navigationController ??  UINavigationController(), seriesId: seriesId)
             coordinator.start()
@@ -57,3 +58,20 @@ extension TvShowsController: UICollectionViewDataSource, UICollectionViewDelegat
     }
 }
 
+extension TvShowsController: ListProtocol {
+    
+    func didTapSeeAllButton(dataType: HomeCell.DataType, data: [MovieResult]?) {
+        guard let movies = data else { return }
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ListController") as! ListController
+        controller.movies = movies
+        self.navigationController?.show(controller, sender: nil)
+    }
+    
+    func didTapSeeAllButton(dataType: HomeCell.DataType, data: [TvShowResult]?) {
+        guard let shows = data else { return }
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ListController") as! ListController
+        controller.shows = shows
+        self.navigationController?.show(controller, sender: nil)
+    }
+    
+}

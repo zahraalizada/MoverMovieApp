@@ -20,7 +20,7 @@ class MovieDetailController: UIViewController {
         viewModel?.success = { [weak self] in
             DispatchQueue.main.async {
                 self?.collection.reloadData()
-//                print(self?.viewModel?.movie)
+                //                print(self?.viewModel?.movie)
             }
         }
         viewModel?.error = { errorMessage in

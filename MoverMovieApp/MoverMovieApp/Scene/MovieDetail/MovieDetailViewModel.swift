@@ -7,6 +7,18 @@
 
 import Foundation
 
+enum MovieDetailTypeEnum {
+    case detail
+    case cast
+    case recommend
+    
+}
+
+struct MovieDetailModel {
+    let type: MovieDetailTypeEnum
+    let data: Any
+}
+
 class MovieDetailViewModel {
     
     let movieDetailManager: MovieDetailManager?
@@ -17,9 +29,9 @@ class MovieDetailViewModel {
     var error: ((String) -> Void)?
     
     init(movieId: Int, movieDetailManager: MovieDetailManager?) {
-           self.movieId = movieId
-           self.movieDetailManager = movieDetailManager
-           getMovieDetail()
+        self.movieId = movieId
+        self.movieDetailManager = movieDetailManager
+        getMovieDetail()
     }
     
     func getMovieDetail() {
@@ -28,7 +40,7 @@ class MovieDetailViewModel {
                 print("Error: \(errorMessage)")
                 self.error?(errorMessage)
             } else if let data {
-//                print("Data: \(data)")
+                //                print("Data: \(data)")
                 self.movie.append(data)
                 self.success?()
             }

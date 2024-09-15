@@ -78,6 +78,12 @@
                     <integer key="value" value="8"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="durationLabel" destination="PCg-fp-EK6" id="WbO-Zk-hOX"/>
+                <outlet property="rateLabel" destination="PTR-Vl-XlK" id="UZW-RW-WIp"/>
+                <outlet property="searchImage" destination="fmd-Ga-YMs" id="DG7-Qr-iN4"/>
+                <outlet property="titleLabel" destination="kdu-9b-XLX" id="zDK-4a-81d"/>
+            </connections>
             <point key="canvasLocation" x="383.20610687022901" y="48.943661971830991"/>
         </collectionViewCell>
     </objects>
