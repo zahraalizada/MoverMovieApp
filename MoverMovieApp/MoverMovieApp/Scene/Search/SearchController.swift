@@ -25,6 +25,7 @@ class SearchController: UIViewController {
     func configUI(){
         title = "Search"
         searchBar.backgroundImage = UIImage()
+        searchBar.placeholder = "Search movies..."
         
         if let textField = searchBar.value(forKey: "searchField") as? UITextField {
             textField.backgroundColor = UIColor.textWhite
@@ -32,6 +33,7 @@ class SearchController: UIViewController {
             textField.layer.cornerRadius = 8
             textField.clipsToBounds = true
         }
+        
     }
     
     func configCollection() {
