@@ -9,6 +9,7 @@ import Foundation
 
 class MovieDetailManager {
     func getMovieDetails(endpoint: String?, completion: @escaping(MovieResult?, String?) -> Void) {
+        print("Endpoint: \(endpoint ?? "")")
         NetworkManager.request(model: MovieResult.self, endpoint: endpoint ?? "", completion: completion)
     }
 }

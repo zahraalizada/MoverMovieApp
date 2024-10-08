@@ -24,7 +24,8 @@ class MovieDetailViewModel {
     let movieDetailManager: MovieDetailManager?
     
     var movieId: Int
-    var movie = [MovieResult]()
+//    var movie = [MovieResult]()
+    var movie: MovieResult?
     var success: (() -> Void)?
     var error: ((String) -> Void)?
     
@@ -40,11 +41,14 @@ class MovieDetailViewModel {
                 print("Error: \(errorMessage)")
                 self.error?(errorMessage)
             } else if let data {
-                //                print("Data: \(data)")
-                self.movie.append(data)
+//                                print("Data: \(data)")
+//                self.movie.append(data)
+                self.movie = data
                 self.success?()
             }
         })
     }
+    
+ 
     
 }

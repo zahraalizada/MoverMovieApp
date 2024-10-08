@@ -66,6 +66,7 @@ extension HomeController: ListProtocol {
         guard let movies = data else { return }
         let controller = storyboard?.instantiateViewController(withIdentifier: "ListController") as! ListController
         controller.movies = movies
+        controller.listDataType = .movies
         self.navigationController?.show(controller, sender: nil)
     }
     
@@ -73,6 +74,7 @@ extension HomeController: ListProtocol {
         guard let shows = data else { return }
         let controller = storyboard?.instantiateViewController(withIdentifier: "ListController") as! ListController
         controller.shows = shows
+        controller.listDataType = .shows
         self.navigationController?.show(controller, sender: nil)
     }
     

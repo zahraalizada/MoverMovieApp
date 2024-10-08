@@ -18,6 +18,8 @@ class HomeCoordinator: Coordinator {
     func start() {
        //
     }
-    
+    func seeAll() {
+        //
+    }
    
 }

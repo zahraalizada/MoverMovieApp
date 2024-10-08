@@ -82,6 +82,7 @@ extension SearchController: UISearchBarDelegate {
             viewModel.searchMovies(query: searchText)
         } else {
             viewModel.items.removeAll()
+            viewModel.getDiscoverMovies()
             collection.reloadData()
         }
     }
