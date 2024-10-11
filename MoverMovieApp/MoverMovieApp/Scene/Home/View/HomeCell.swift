@@ -40,6 +40,11 @@ class HomeCell: UICollectionViewCell {
     func configure(title: String, items: [TopImageBottomLabelProtocol]) {
         nameLabel.text = title
         self.items = items
+        if let item = items as? [MovieResult] {
+            configure(title: title, movies: item)
+        } else if let item = items as? [TvShowResult] {
+            configureTv(title: title, shows: item)
+        }
     }
     
     func configure(title: String, movies: [MovieResult]) {
@@ -82,8 +87,23 @@ extension HomeCell: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         .init(width: 140 , height: 260)
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didItemSelected?(indexPath.item)
+//        didItemSelected?(indexPath.item)
+        
+//        let movie = movies[indexPath.item]
+//        didItemSelected?(movie.id ?? 0)
+        
+        switch dataType {
+           case .movies:
+               let movie = movies[indexPath.item]
+               didItemSelected?(movie.id ?? 0) // Movie ID'sini ilet
+           case .shows:
+               let show = shows[indexPath.item]
+               didItemSelected?(show.id ?? 0) // TV Show ID'sini ilet
+           }
+        
+        
     }
     
 }

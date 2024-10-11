@@ -31,10 +31,13 @@
 		1A4497882C73002B00118938 /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4497872C73002B00118938 /* MovieEndpoint.swift */; };
 		1A44978B2C73023900118938 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44978A2C73023900118938 /* HomeCoordinator.swift */; };
 		1A44978D2C73024900118938 /* ActorsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44978C2C73024900118938 /* ActorsCoordinator.swift */; };
-		1A602C3D2C96C4D500CEB0E4 /* MovieDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A602C3C2C96C4D500CEB0E4 /* MovieDetailCell.xib */; };
-		1A602C3E2C96C4D500CEB0E4 /* MovieDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A602C3B2C96C4D500CEB0E4 /* MovieDetailCell.swift */; };
 		1A602C402C96F9E700CEB0E4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A602C3F2C96F9E700CEB0E4 /* ListViewModel.swift */; };
 		1A7DA6A12CB529AA0088E52A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DA6A02CB529AA0088E52A /* GoogleService-Info.plist */; };
+		1A7DA6A42CB52DAE0088E52A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7DA6A32CB52DAE0088E52A /* FirebaseAuth */; };
+		1A7DA6A62CB52DAE0088E52A /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7DA6A52CB52DAE0088E52A /* FirebaseCrashlytics */; };
+		1A7DA6A82CB52DAE0088E52A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7DA6A72CB52DAE0088E52A /* FirebaseDatabase */; };
+		1A7DA6AA2CB52DAE0088E52A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7DA6A92CB52DAE0088E52A /* FirebaseFirestore */; };
+		1A7DA6AC2CB52DAE0088E52A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7DA6AB2CB52DAE0088E52A /* FirebaseStorage */; };
 		1A8393F92C8B617C0034456E /* SearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8393F82C8B617C0034456E /* SearchEndpoint.swift */; };
 		1A8393FB2C8B61890034456E /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8393FA2C8B61890034456E /* SearchManager.swift */; };
 		1A93D06B2C86E6F7002F553E /* MovieDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93D06A2C86E6F7002F553E /* MovieDetailManager.swift */; };
@@ -46,6 +49,14 @@
 		1A93D07A2C8784A9002F553E /* TvShowDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93D0792C8784A9002F553E /* TvShowDetailController.swift */; };
 		1A93D0802C87A0EE002F553E /* TvShowDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93D07F2C87A0EE002F553E /* TvShowDetailManager.swift */; };
 		1A93D0842C87A934002F553E /* TvShowDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93D0832C87A934002F553E /* TvShowDetailCoordinator.swift */; };
+		1A9D94182CB9707900C35600 /* MovieDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9D94172CB9707900C35600 /* MovieDetailCell.xib */; };
+		1A9D94192CB9707900C35600 /* MovieDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D94162CB9707900C35600 /* MovieDetailCell.swift */; };
+		1A9D941C2CB9760D00C35600 /* MovieDetailReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9D941B2CB9760D00C35600 /* MovieDetailReviewCell.xib */; };
+		1A9D941D2CB9760D00C35600 /* MovieDetailReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D941A2CB9760D00C35600 /* MovieDetailReviewCell.swift */; };
+		1A9D94202CB9762600C35600 /* MovieDetailCastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9D941F2CB9762600C35600 /* MovieDetailCastCell.xib */; };
+		1A9D94212CB9762600C35600 /* MovieDetailCastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D941E2CB9762600C35600 /* MovieDetailCastCell.swift */; };
+		1A9D94242CB9764000C35600 /* MovieDetailRecomendedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9D94232CB9764000C35600 /* MovieDetailRecomendedCell.xib */; };
+		1A9D94252CB9764000C35600 /* MovieDetailRecomendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D94222CB9764000C35600 /* MovieDetailRecomendedCell.swift */; };
 		1AA79D032C6F6C43009B92DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1AA79D022C6F6C43009B92DD /* Alamofire */; };
 		1AA79D062C6F6C4D009B92DD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1AA79D052C6F6C4D009B92DD /* Kingfisher */; };
 		1AA79D092C6F6C82009B92DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA79D082C6F6C82009B92DD /* NetworkManager.swift */; };
@@ -106,8 +117,6 @@
 		1A4497872C73002B00118938 /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
 		1A44978A2C73023900118938 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		1A44978C2C73024900118938 /* ActorsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsCoordinator.swift; sourceTree = "<group>"; };
-		1A602C3B2C96C4D500CEB0E4 /* MovieDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCell.swift; sourceTree = "<group>"; };
-		1A602C3C2C96C4D500CEB0E4 /* MovieDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailCell.xib; sourceTree = "<group>"; };
 		1A602C3F2C96F9E700CEB0E4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		1A7DA6A02CB529AA0088E52A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A8393F82C8B617C0034456E /* SearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpoint.swift; sourceTree = "<group>"; };
@@ -121,6 +130,14 @@
 		1A93D0792C8784A9002F553E /* TvShowDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailController.swift; sourceTree = "<group>"; };
 		1A93D07F2C87A0EE002F553E /* TvShowDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailManager.swift; sourceTree = "<group>"; };
 		1A93D0832C87A934002F553E /* TvShowDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailCoordinator.swift; sourceTree = "<group>"; };
+		1A9D94162CB9707900C35600 /* MovieDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCell.swift; sourceTree = "<group>"; };
+		1A9D94172CB9707900C35600 /* MovieDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailCell.xib; sourceTree = "<group>"; };
+		1A9D941A2CB9760D00C35600 /* MovieDetailReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailReviewCell.swift; sourceTree = "<group>"; };
+		1A9D941B2CB9760D00C35600 /* MovieDetailReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailReviewCell.xib; sourceTree = "<group>"; };
+		1A9D941E2CB9762600C35600 /* MovieDetailCastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCastCell.swift; sourceTree = "<group>"; };
+		1A9D941F2CB9762600C35600 /* MovieDetailCastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailCastCell.xib; sourceTree = "<group>"; };
+		1A9D94222CB9764000C35600 /* MovieDetailRecomendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRecomendedCell.swift; sourceTree = "<group>"; };
+		1A9D94232CB9764000C35600 /* MovieDetailRecomendedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailRecomendedCell.xib; sourceTree = "<group>"; };
 		1AA79D082C6F6C82009B92DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1AA79D0A2C6F6C89009B92DD /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		1AA79D112C6F7179009B92DD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -161,8 +178,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7DA6A82CB52DAE0088E52A /* FirebaseDatabase in Frameworks */,
 				1AA79D062C6F6C4D009B92DD /* Kingfisher in Frameworks */,
+				1A7DA6A62CB52DAE0088E52A /* FirebaseCrashlytics in Frameworks */,
+				1A7DA6A42CB52DAE0088E52A /* FirebaseAuth in Frameworks */,
+				1A7DA6AC2CB52DAE0088E52A /* FirebaseStorage in Frameworks */,
 				1AA79D032C6F6C43009B92DD /* Alamofire in Frameworks */,
+				1A7DA6AA2CB52DAE0088E52A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,8 +524,14 @@
 				1AEE13DB2C79E252002972C0 /* MovieDetailController.swift */,
 				1AEE13DD2C79E261002972C0 /* MovieDetailViewModel.swift */,
 				1AEE13DF2C79E269002972C0 /* MovieDetailCoordinator.swift */,
-				1A602C3B2C96C4D500CEB0E4 /* MovieDetailCell.swift */,
-				1A602C3C2C96C4D500CEB0E4 /* MovieDetailCell.xib */,
+				1A9D94162CB9707900C35600 /* MovieDetailCell.swift */,
+				1A9D94172CB9707900C35600 /* MovieDetailCell.xib */,
+				1A9D941A2CB9760D00C35600 /* MovieDetailReviewCell.swift */,
+				1A9D941B2CB9760D00C35600 /* MovieDetailReviewCell.xib */,
+				1A9D941E2CB9762600C35600 /* MovieDetailCastCell.swift */,
+				1A9D94222CB9764000C35600 /* MovieDetailRecomendedCell.swift */,
+				1A9D94232CB9764000C35600 /* MovieDetailRecomendedCell.xib */,
+				1A9D941F2CB9762600C35600 /* MovieDetailCastCell.xib */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -562,6 +590,11 @@
 			packageProductDependencies = (
 				1AA79D022C6F6C43009B92DD /* Alamofire */,
 				1AA79D052C6F6C4D009B92DD /* Kingfisher */,
+				1A7DA6A32CB52DAE0088E52A /* FirebaseAuth */,
+				1A7DA6A52CB52DAE0088E52A /* FirebaseCrashlytics */,
+				1A7DA6A72CB52DAE0088E52A /* FirebaseDatabase */,
+				1A7DA6A92CB52DAE0088E52A /* FirebaseFirestore */,
+				1A7DA6AB2CB52DAE0088E52A /* FirebaseStorage */,
 			);
 			productName = MoverMovieApp;
 			productReference = 1AF524342C54D7E200101F87 /* MoverMovieApp.app */;
@@ -594,6 +627,7 @@
 			packageReferences = (
 				1AA79D012C6F6C43009B92DD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1AA79D042C6F6C4D009B92DD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 1AF524352C54D7E200101F87 /* Products */;
 			projectDirPath = "";
@@ -616,14 +650,17 @@
 				1AF524412C54D7E400101F87 /* Assets.xcassets in Resources */,
 				1ACB50B62C79CB9200898B6B /* Kanit-Medium.ttf in Resources */,
 				1ACB50B92C79CB9200898B6B /* Kanit-SemiBold.ttf in Resources */,
+				1A9D94242CB9764000C35600 /* MovieDetailRecomendedCell.xib in Resources */,
+				1A9D94182CB9707900C35600 /* MovieDetailCell.xib in Resources */,
 				1AF524442C54D7E400101F87 /* Base in Resources */,
 				1AF5243F2C54D7E200101F87 /* Base in Resources */,
 				1ACB50B32C79CB9200898B6B /* Kanit-Italic.ttf in Resources */,
-				1A602C3D2C96C4D500CEB0E4 /* MovieDetailCell.xib in Resources */,
+				1A9D94202CB9762600C35600 /* MovieDetailCastCell.xib in Resources */,
 				1ACB508D2C7991E600898B6B /* TopImageBottomLabelCell.xib in Resources */,
 				1ACB50942C79A2F500898B6B /* HomeCell.xib in Resources */,
 				1ACB50B82C79CB9200898B6B /* Kanit-Regular.ttf in Resources */,
 				1ACB50AD2C79CB9200898B6B /* Kanit-Bold.ttf in Resources */,
+				1A9D941C2CB9760D00C35600 /* MovieDetailReviewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +683,6 @@
 				1AEE13DE2C79E261002972C0 /* MovieDetailViewModel.swift in Sources */,
 				1A602C402C96F9E700CEB0E4 /* ListViewModel.swift in Sources */,
 				1ACB50902C79949800898B6B /* Extension.swift in Sources */,
-				1A602C3E2C96C4D500CEB0E4 /* MovieDetailCell.swift in Sources */,
 				1A2D43F02C6CB0970010F5A2 /* HomeViewModel.swift in Sources */,
 				1A2D44152C6CB4EB0010F5A2 /* ProfileController.swift in Sources */,
 				1A2D43FF2C6CB3D20010F5A2 /* RegisterController.swift in Sources */,
@@ -656,11 +692,13 @@
 				1A2D440B2C6CB4240010F5A2 /* SearchViewModel.swift in Sources */,
 				1A93D0782C8778BF002F553E /* ActorDetailCoordinator.swift in Sources */,
 				1AA79D092C6F6C82009B92DD /* NetworkManager.swift in Sources */,
+				1A9D94212CB9762600C35600 /* MovieDetailCastCell.swift in Sources */,
 				1A2D44132C6CB4E00010F5A2 /* ProfileViewModel.swift in Sources */,
 				1ACB50962C79C70700898B6B /* TabBarControllerViewController.swift in Sources */,
 				1A44977F2C72FF6300118938 /* ActorManager.swift in Sources */,
 				1A226C0A2C82165B008CF58B /* ActorDetailViewModel.swift in Sources */,
 				1A44978D2C73024900118938 /* ActorsCoordinator.swift in Sources */,
+				1A9D94192CB9707900C35600 /* MovieDetailCell.swift in Sources */,
 				1AEE13D72C79CF67002972C0 /* Coordinator.swift in Sources */,
 				1A4497842C72FFEB00118938 /* MovieListUseCase.swift in Sources */,
 				1A8393F92C8B617C0034456E /* SearchEndpoint.swift in Sources */,
@@ -672,6 +710,7 @@
 				1AEE13E02C79E269002972C0 /* MovieDetailCoordinator.swift in Sources */,
 				1A2D43F22C6CB0AA0010F5A2 /* HomeController.swift in Sources */,
 				1A4497812C72FF7C00118938 /* ActorMovieManager.swift in Sources */,
+				1A9D94252CB9764000C35600 /* MovieDetailRecomendedCell.swift in Sources */,
 				1A4497882C73002B00118938 /* MovieEndpoint.swift in Sources */,
 				1AA7C9902C84996400529E31 /* TvShow.swift in Sources */,
 				1A2D43F62C6CB0DE0010F5A2 /* LoginViewModel.swift in Sources */,
@@ -685,6 +724,7 @@
 				1A44977D2C72FF5300118938 /* ActorEndpoint.swift in Sources */,
 				1AA79D0B2C6F6C89009B92DD /* NetworkConstants.swift in Sources */,
 				1A4497862C73001500118938 /* MovieManager.swift in Sources */,
+				1A9D941D2CB9760D00C35600 /* MovieDetailReviewCell.swift in Sources */,
 				1A93D06B2C86E6F7002F553E /* MovieDetailManager.swift in Sources */,
 				1A93D0802C87A0EE002F553E /* TvShowDetailManager.swift in Sources */,
 				1A2D43FD2C6CB3B80010F5A2 /* ActorsController.swift in Sources */,
@@ -911,6 +951,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
 		1AA79D012C6F6C43009B92DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -930,6 +978,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A7DA6A32CB52DAE0088E52A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1A7DA6A52CB52DAE0088E52A /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		1A7DA6A72CB52DAE0088E52A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		1A7DA6A92CB52DAE0088E52A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1A7DA6AB2CB52DAE0088E52A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A7DA6A22CB52DAE0088E52A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		1AA79D022C6F6C43009B92DD /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1AA79D012C6F6C43009B92DD /* XCRemoteSwiftPackageReference "Alamofire" */;

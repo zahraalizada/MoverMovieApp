@@ -9,7 +9,7 @@ import UIKit
 
 class MovieDetailController: UIViewController {
     
-    @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     var viewModel: MovieDetailViewModel?
     
@@ -17,7 +17,7 @@ class MovieDetailController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
-        configureCollection()
+        configureTableview()
         configureViewModel()
     }
     
@@ -26,15 +26,15 @@ class MovieDetailController: UIViewController {
         title = "MovieDetail"
     }
     
-    func configureCollection() {
-        collection.register(UINib(nibName: "MovieDetailCell", bundle: nil), forCellWithReuseIdentifier: "MovieDetailCell")
+    func configureTableview() {
+        tableView.register(UINib(nibName: "MovieDetailCell", bundle: nil), forCellReuseIdentifier: "MovieDetailCell")
         
     }
     
     func configureViewModel() {
         viewModel?.success = { [weak self] in
             DispatchQueue.main.async {
-                self?.collection.reloadData()
+                self?.tableView.reloadData()
                 print(self?.viewModel?.movie)
             }
         }
@@ -45,26 +45,15 @@ class MovieDetailController: UIViewController {
     }
 }
 
-extension MovieDetailController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        viewModel?.movie.count ?? 0
+extension MovieDetailController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieDetailCell", for: indexPath) as! MovieDetailCell
-//        cell.titleLabel.text = viewModel?.movie[indexPath.item].title
-//        if let movie = viewModel?.movie[indexPath.item] {
-//            cell.titleLabel.text = movie.title
-//        }
-        cell.titleLabel.text = viewModel?.movie?.title
-         
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDetailCell", for: indexPath) as! MovieDetailCell
+        cell.textLabel?.text = viewModel?.movie?.title ?? ""
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 200) // Bu boyutları gerektiği şekilde ayarlayın
-    }
-    
     
 }
